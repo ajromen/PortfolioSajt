@@ -57,9 +57,10 @@ function setup() {
   stubg = [];
   stubd = [];
   dodajStub();
-  BRZ = floor(width / 200);
+  BRZ = floor(width / 100);
   ACC = BRZ / 5;
   textSize(height / 10);
+  vSkoka=floor(height/60)
 }
 
 function draw() {
@@ -102,7 +103,7 @@ function razmisljaj() {
     ptica.y += V;
     V += ACC;
 
-    if (i % (BRZ * 40) == 0) {
+    if (i % (BRZ * floor(width/17)) == 0) {
       dodajStub();
     }
     button.mousePressed(promeniBoju);
